@@ -1,14 +1,9 @@
 package principal;
 
-import javax.swing.JFrame;
-
-import clases.Ventana;
+import clases.MenuInicio;
 
 public class Principal {
-
-	public static void main(String[] args) {
-		Ventana ventana = new Ventana();
-		
-	}
-
+    public static void main(String[] args) {
+        new MenuInicio();
+    }
 }

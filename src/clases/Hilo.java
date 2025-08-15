@@ -16,10 +16,10 @@ public class Hilo extends Thread {
     public void run() {
         while (running) {
             lamina.actualizar();   // Mover pelota y raquetas
-            lamina.repaint();      // esto para que no se intecalen la eplota y kla raqueta
+            lamina.repaint();      // Para evitar interferencias entre pelota y raqueta
 
             try {
-                Thread.sleep(6);   // para que no hande con lag
+                Thread.sleep(6);   // Evitar lag
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

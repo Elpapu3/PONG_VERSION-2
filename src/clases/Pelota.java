@@ -1,5 +1,6 @@
 package clases;
 
+import java.awt.Color;
 import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 
@@ -8,14 +9,19 @@ public class Pelota {
     private int y;
     private int dx = 2, dy = 2; 
     private final int anc = 15, alt = 15; 
+    private Color color;
 
-    public Pelota(int x, int y) {
+    public Pelota(int x, int y, Color color) {
         this.x = x;
         this.y = y;
-    }
+        this.color = color;    }
 
     public Rectangle2D getPelota() {
         return new Rectangle2D.Double(x, y, anc, alt);
+    }
+    
+    public Color getColor() {
+        return color;
     }
 
     /**
@@ -103,6 +109,4 @@ public class Pelota {
         dx = -dx;
     }
 }
-
-
 
